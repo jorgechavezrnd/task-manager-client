@@ -1,0 +1,160 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'form';
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  width: 75%;
+  max-width: 250px;
+  justify-self: center;
+}
+
+.form-container {
+  grid-area: form;
+  display: grid;
+  grid-template-areas: 'title title'
+                       'task-title task-title'
+                       'description description'
+                       'state state'
+                       'deadline deadline'
+                       'submit cancel'
+                       'errors errors';
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid darkblue;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: lightblue;
+  row-gap: 10px;
+  column-gap: 5px;
+}
+
+.title-container {
+  grid-area: title;
+  font-size: 2em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.task-title-container {
+  grid-area: task-title;
+}
+
+.description-container {
+  grid-area: description;
+}
+
+.state-container {
+  grid-area: state;
+}
+
+.deadline-container {
+  grid-area: deadline;
+}
+
+.submit-container {
+  grid-area: submit;
+  display: flex;
+  justify-content: right;
+}
+
+.cancel-container {
+  grid-area: cancel;
+  display: flex;
+  justify-content: left;
+}
+
+.errors-container {
+  grid-area: errors;
+  border: 2px solid darkred;
+  background-color: lightcoral;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: darkred;
+  font-size: 1em;
+}
+
+.form-input {
+  height: 25px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.submit-button {
+  width: 75%;
+  height: 30px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: lightgreen;
+}
+
+.submit-button:hover {
+  background-color: lime;
+  cursor: pointer;
+}
+
+.cancel-button {
+  width: 75%;
+  height: 30px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: lightcoral;
+}
+
+.cancel-button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+@media(width < 500px) {
+  .grid-container {
+    max-width: unset;
+    width: 95%;
+    row-gap: 10px;
+  }
+  .form-container {
+    grid-template-areas: 'title'
+                         'task-title'
+                         'description'
+                         'state'
+                         'deadline'
+                         'submit'
+                         'cancel'
+                         'errors';
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .title-container {
+    font-size: 3em;
+  }
+  .submit-container {
+    justify-content: center;
+  }
+  .cancel-container {
+    justify-content: center;
+  }
+  .form-input {
+    height: 45px;
+    font-size: 1.5em;
+  }
+  .submit-button {
+    height: 45px;
+    width: 95%;
+    font-size: 1.5em;
+  }
+  .cancel-button {
+    height: 45px;
+    width: 95%;
+    font-size: 1.5em;
+  }
+}

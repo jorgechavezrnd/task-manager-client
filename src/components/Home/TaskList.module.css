@@ -1,0 +1,109 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'search-form'
+                       'count'
+                       'tasks';
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.search-form-container {
+  grid-area: search-form;
+  display: grid;
+  grid-template-areas: 'title title'
+                       'search deadline'
+                       'state submit-button';
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid darkblue;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: lightblue;
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: center;
+  width: 75%;
+  max-width: 500px;
+  justify-self: center;
+}
+
+.count-container {
+  grid-area: count;
+  text-align: center;
+}
+
+.tasks-container {
+  grid-area: tasks;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.task-card {
+  width: 515px;
+}
+
+.title-container {
+  grid-area: title;
+  text-align: center;
+  font-size: 2em;
+}
+
+.search-container {
+  grid-area: search;
+}
+
+.deadline-container {
+  grid-area: deadline;
+}
+
+.state-container {
+  grid-area: state;
+}
+
+.submit-button-container {
+  grid-area: submit-button;
+  display: flex;
+  justify-content: center;
+}
+
+.form-input {
+  height: 25px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.submit-button {
+  width: 55%;
+  height: 30px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: lightgreen;
+}
+
+.submit-button:hover {
+  background-color: lime;
+  cursor: pointer;
+}
+
+@media(width <= 750px) {
+  .search-form-container {
+    grid-template-areas: 'title'
+                         'search'
+                         'deadline'
+                         'state'
+                         'submit-button';
+    grid-template-columns: 1fr;
+  }
+  .task-card {
+    width: 95%;
+  }
+}

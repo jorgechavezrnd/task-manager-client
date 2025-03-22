@@ -88,14 +88,17 @@ const TaskList = () => {
             />
           </div>
           <div className={styles['state-container']}>
-            <input
-              className={styles['form-input']}
-              type='text'
+            <select
               name='state'
-              placeholder='Estado'
+              className={styles['form-input']}
               value={searchData.state}
               onChange={handleSearchChange}
-            />
+            >
+              <option value=''></option>
+              <option value='pendiente'>Pendiente</option>
+              <option value='en progreso'>En progreso</option>
+              <option value='completado'>Completado</option>
+            </select>
           </div>
           <div className={styles['submit-button-container']}>
             <button className={styles['submit-button']} type='submit'>Filtrar</button>

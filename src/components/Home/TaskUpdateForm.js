@@ -75,7 +75,7 @@ const TaskUpdateForm = () => {
   if (!task) {
     return (
       <>
-        Task not found!
+        Tarea no encontrada!
       </>
     );
   }
@@ -110,14 +110,16 @@ const TaskUpdateForm = () => {
             />
           </div>
           <div className={styles['state-container']}>
-            <input
-              className={styles['form-input']}
-              type='text'
+            <select
               name='state'
-              placeholder='Estado'
+              className={styles['form-input']}
               value={formData.state}
               onChange={handleChange}
-            />
+            >
+              <option value='pendiente'>Pendiente</option>
+              <option value='en progreso'>En progreso</option>
+              <option value='completado'>Completado</option>
+            </select>
           </div>
           <div className={styles['deadline-container']}>
             <input

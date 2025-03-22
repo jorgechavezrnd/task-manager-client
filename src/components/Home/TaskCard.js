@@ -16,8 +16,14 @@ const TaskCard = (props) => {
     handleDeleteTask(task.id);
   };
 
+  const getBackgroundColorByState = (state) => {
+    if (state === 'en progreso') return 'lightyellow';
+    if (state === 'completado') return 'lightgreen';
+    return 'lightgray';
+  };
+
   return (
-    <div className={styles['main-container']}>
+    <div className={styles['main-container']} style={ {backgroundColor: getBackgroundColorByState(task.state) } }>
       <div className={styles['grid-container']}>
         <div className={styles['title-container']}>
           <span>{task.title}</span>

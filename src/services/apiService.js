@@ -1,4 +1,5 @@
-const api = 'http://localhost:3000/api';
+//const api = 'http://localhost:3000/api';
+const api = 'https://task-manager-server-s54w.onrender.com/api';
 
 exports.get = async (url, token) => {
   const options = {

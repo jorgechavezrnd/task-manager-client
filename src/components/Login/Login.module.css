@@ -1,0 +1,133 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'form'
+                       'register';
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  width: 75%;
+  max-width: 250px;
+  justify-self: center;
+}
+
+.form-container {
+  grid-area: form;
+  display: grid;
+  grid-template-areas: 'title'
+                       'email'
+                       'password'
+                       'submit'
+                       'errors';
+  grid-template-columns: 1fr;
+  border: 3px solid darkblue;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: lightblue;
+  row-gap: 10px;
+}
+
+.title-container {
+  grid-area: title;
+  font-size: 1.9em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.email-container {
+  grid-area: email;
+}
+
+.password-container {
+  grid-area: password;
+}
+
+.submit-container {
+  grid-area: submit;
+  display: flex;
+  justify-content: center;
+}
+
+.errors-container {
+  grid-area: errors;
+  border: 2px solid darkred;
+  background-color: lightcoral;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: darkred;
+  font-size: 1em;
+}
+
+.register-container {
+  grid-area: register;
+  text-align: center;
+}
+
+.form-input {
+  height: 25px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.submit-button {
+  width: 55%;
+  height: 30px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: lightgreen;
+}
+
+.submit-button:hover {
+  background-color: lime;
+  cursor: pointer;
+}
+
+.create-account-button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.create-account-button:hover {
+  color: darkblue;
+}
+
+@media(width < 500px) {
+  .grid-container {
+    max-width: unset;
+    width: 95%;
+    row-gap: 10px;
+  }
+  .form-container {
+    row-gap: 20px;
+  }
+  .title-container {
+    font-size: 3em;
+  }
+  .form-input {
+    height: 45px;
+    font-size: 1.5em;
+  }
+  .submit-button {
+    height: 45px;
+    width: 95%;
+    font-size: 1.5em;
+  }
+  .create-account-button {
+    font-size: 1.5em;
+  }
+}

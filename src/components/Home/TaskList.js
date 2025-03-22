@@ -94,7 +94,7 @@ const TaskList = () => {
               value={searchData.state}
               onChange={handleSearchChange}
             >
-              <option value=''></option>
+              <option value=''>Seleciona una estado</option>
               <option value='pendiente'>Pendiente</option>
               <option value='en progreso'>En progreso</option>
               <option value='completado'>Completado</option>
